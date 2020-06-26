@@ -1,4 +1,4 @@
-package com.doud.controller;
+package com.doud.springboot.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ public class HelloController {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    @RequestMapping("hello.do")
+    @RequestMapping("hello")
     @ResponseBody
     public String hello(){
         List staffList = jdbcTemplate.queryForList("select * from staff");
