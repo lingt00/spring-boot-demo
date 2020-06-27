@@ -1,8 +1,10 @@
 package com.doud.springboot.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Staff {
+public class Staff implements Serializable {
+    private static final long serialVersionUID = 3239721973017506182L;
     /**
      * 主键
      */
