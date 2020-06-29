@@ -1,4 +1,16 @@
 
+spring:
+  redis:
+    host: 127.0.0.1
+  rabbitmq:
+    host: 127.0.0.1
+    username: guest
+    password: guest
+    #virtual-host:
+    port: 5672
+
+
+
 person:
   name: 张三
   age: 100

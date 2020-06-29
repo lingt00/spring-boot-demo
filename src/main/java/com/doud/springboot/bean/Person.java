@@ -3,6 +3,7 @@ package com.doud.springboot.bean;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
 import java.util.Map;
 
 /**
@@ -13,10 +14,19 @@ import java.util.Map;
  */
 @Component
 @ConfigurationProperties(prefix = "person")
-public class Person {
+public class Person implements Serializable {
+    private static final long serialVersionUID = -6921519455543477613L;
     private String name;
     private int age;
     private Map<String,String> info;
+
+    public Person() {
+    }
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
     public String getName() {
         return name;
